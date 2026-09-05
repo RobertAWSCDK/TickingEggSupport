@@ -1,88 +1,166 @@
-<!DOCTYPE html>
-<html lang="de">
+<!doctype html>
+<html lang="de" data-lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Impressum — Ticking Egg</title>
-<style>
-  :root{
-    --bg:#EDE3D2; --bg-deep:#DCCFB8; --surface:#F8F3E9;
-    --ink:#221E1A; --muted:#7C7264; --line:#D6C9B2; --gold:#A8842F;
-  }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    margin:0; padding:0 22px 84px;
-    background:radial-gradient(120% 70% at 50% 8%, #FAF6EE 0%, var(--bg) 46%, var(--bg-deep) 100%) fixed;
-    color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size:17px; line-height:1.62;
-  }
-  .wrap{max-width:640px; margin:0 auto}
-  .label{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin:0}
-  header{padding:56px 0 4px}
-  h1{font-size:34px; line-height:1.15; letter-spacing:-.02em; margin:12px 0 4px; font-weight:800}
-  h2{font-size:14px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
-     font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-     margin:44px 0 14px; padding-bottom:10px; border-bottom:1px solid var(--line)}
-  p{margin:0 0 14px}
-  a{color:var(--gold)}
-  a:focus-visible{outline:3px solid #7C6520; outline-offset:3px}
-  .todo{background:#F6E7C8; border-left:4px solid var(--gold); padding:14px 18px; border-radius:0 14px 14px 0}
-  footer{margin-top:56px; padding-top:22px; border-top:1px solid var(--line);
-         text-align:center; color:var(--muted); font-size:14px}
-  footer a{margin:0 10px}
-  @media (max-width:420px){ h1{font-size:28px} body{font-size:16px} }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Impressum · Ticking Egg</title>
+<meta name="description" content="Impressum und Anbieterkennzeichnung für Ticking Egg.">
+<meta name="theme-color" content="#E9DBC4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161410" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="/assets/app.css">
 </head>
-<body>
+
+<body data-title-de="Impressum · Ticking Egg"
+      data-title-en="Legal notice · Ticking Egg"
+      data-desc-de="Impressum und Anbieterkennzeichnung für Ticking Egg."
+      data-desc-en="Legal notice and provider identification for Ticking Egg.">
+
 <div class="wrap">
 
-<header>
-  <p class="label">Ticking Egg</p>
-  <h1>Impressum</h1>
-</header>
+  <header class="top">
+    <a class="wordmark wordmark--back" href="/">← Ticking Egg</a>
+    <div class="lang" role="group" aria-label="Sprache / Language">
+      <button type="button" data-lang-btn="de" aria-pressed="true">DE</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
 
-<h2>Angaben gemäß § 5 DDG</h2>
-<div class="todo">
-  <p>Robert Schädlich<br>
-  Schillerstrasse 50<br>
-  46535 Dinslaken<br>
-  Deutschland</p>
+  <main>
+
+    <section class="hero hero--slim">
+      <svg class="mark mark--small" width="44" height="47" viewBox="0 0 104 112" aria-hidden="true">
+        <defs><clipPath id="eggClip"><path d="M52 3C27 3 6 39 6 68c0 26 20 44 46 44s46-18 46-44C98 39 77 3 52 3Z"/></clipPath></defs>
+        <g clip-path="url(#eggClip)">
+          <rect width="104" height="112" fill="#D3D1CC"/>
+          <ellipse cx="36" cy="40" rx="50" ry="56" transform="rotate(-22 36 40)" fill="#FFFEF9"/>
+        </g>
+        <path d="M12 56Q52 76 92 56" fill="none" stroke="#B9B5AC" stroke-width="1.4"/>
+        <g stroke="#161410" stroke-width="1.6" stroke-linecap="round" opacity=".8">
+          <path d="M14.7 57.3l3.2 -6.8M20 59.6l1.9 -4.6M25.3 61.6l2.4 -7.1M30.7 63.2l1.3 -4.8M36 64.4l1.5 -7.4M41.3 65.3l.7 -5M46.7 65.8l.5 -7.5M52 66l0 -5M57.3 65.8l-.5 -7.5M62.7 65.3l-.7 -5M68 64.4l-1.5 -7.4M73.3 63.2l-1.3 -4.8M78.7 61.6l-2.4 -7.1M84 59.6l-1.9 -4.6M89.3 57.3l-3.2 -6.8"/>
+        </g>
+        <path d="M52 71l6 8.5H46Z" fill="#E16A54"/>
+      </svg>
+
+      <h1>
+        <span lang="de">Impressum</span>
+        <span lang="en">Legal notice</span>
+      </h1>
+      <p class="lede">
+        <span lang="de">Angaben gemäß § 5 DDG</span>
+        <span lang="en">Provider identification under § 5 DDG (German Digital Services Act)</span>
+      </p>
+    </section>
+
+    <section class="prose">
+      <h2 class="rule">
+        <span lang="de">Anbieter</span><span lang="en">Provider</span>
+      </h2>
+      <div class="block">
+        <p>Robert Schädlich<br>
+        Schillerstrasse 50<br>
+        46535 Dinslaken<br>
+        <span lang="de">Deutschland</span><span lang="en">Germany</span></p>
+      </div>
+    </section>
+
+    <section class="prose">
+      <h2 class="rule">
+        <span lang="de">Kontakt</span><span lang="en">Contact</span>
+      </h2>
+      <div class="block">
+        <p><span lang="de">Telefon:</span><span lang="en">Phone:</span>
+        <a href="tel:+491727405153">+49 172 7405153</a><br>
+        <span lang="de">E-Mail:</span><span lang="en">Email:</span>
+        <a href="mailto:hello@robdsgn.com">hello@robdsgn.com</a></p>
+      </div>
+    </section>
+
+    <section class="prose">
+      <h2 class="rule">
+        <span lang="de">Umsatzsteuer</span><span lang="en">VAT</span>
+      </h2>
+      <div class="block">
+        <p>
+          <span lang="de">Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE367507189<br>
+          Als Kleinunternehmer im Sinne von § 19 UStG wird keine Umsatzsteuer ausgewiesen.</span>
+          <span lang="en">VAT identification number under § 27a UStG: DE367507189<br>
+          As a small business within the meaning of § 19 UStG, no VAT is shown.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="prose">
+      <h2 class="rule">
+        <span lang="de">Verantwortlich für den Inhalt</span><span lang="en">Responsible for the content</span>
+      </h2>
+      <div class="block">
+        <p>Robert Schädlich, Schillerstrasse 50, 46535 Dinslaken<span lang="en">, Germany</span></p>
+      </div>
+    </section>
+
+    <section class="prose">
+      <h2 class="rule">
+        <span lang="de">Verbraucherstreitbeilegung</span><span lang="en">Consumer dispute resolution</span>
+      </h2>
+      <p>
+        <span lang="de">Ich bin nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</span>
+        <span lang="en">I am neither obliged nor willing to take part in dispute resolution proceedings before a consumer arbitration board.</span>
+      </p>
+    </section>
+
+    <section class="prose">
+      <h2 class="rule">
+        <span lang="de">Haftung für Links</span><span lang="en">Liability for links</span>
+      </h2>
+      <p>
+        <span lang="de">Diese Seite enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte ist stets der jeweilige Anbieter verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft; rechtswidrige Inhalte waren nicht erkennbar. Werden mir Rechtsverletzungen bekannt, entferne ich derartige Links umgehend.</span>
+        <span lang="en">This site contains links to external third-party websites over whose content I have no influence. The respective provider is always responsible for that content. The linked pages were checked for possible legal violations at the time of linking; no unlawful content was apparent. If I become aware of any infringements, I will remove such links immediately.</span>
+      </p>
+    </section>
+
+    <section class="prose">
+      <h2 class="rule">
+        <span lang="de">Urheberrecht</span><span lang="en">Copyright</span>
+      </h2>
+      <p>
+        <span lang="de">Die auf dieser Seite veröffentlichten Inhalte unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Vervielfältigung, Bearbeitung und Verbreitung außerhalb der Grenzen des Urheberrechts bedürfen meiner schriftlichen Zustimmung.</span>
+        <span lang="en">The content published on this site is subject to German copyright law. Contributions by third parties are marked as such. Reproduction, adaptation and distribution beyond the limits of copyright law require my written consent.</span>
+      </p>
+      <p class="note" lang="en">This is a translation for convenience. In case of doubt, the German version of this notice applies.</p>
+      <p class="note" lang="de">Dieses Impressum liegt auch auf Englisch vor. Maßgeblich ist die deutsche Fassung.</p>
+    </section>
+
+  </main>
+
+  <footer class="page">
+    <p>
+      <span lang="de">Ticking Egg · Eine App von Robert Schädlich</span>
+      <span lang="en">Ticking Egg · An app by Robert Schädlich</span>
+    </p>
+  </footer>
 </div>
 
-<h2>Kontakt</h2>
-<div class="todo">
-  <p>Telefon: +491727405153<br>
-  E-Mail: hello@robdsgn.com</p>
-</div>
+<nav class="modebar" aria-label="Ticking Egg">
+  <div class="modebar__inner">
+  <a href="/">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 7.2c0-2.3 2.5-4.2 5.5-4.2s5.5 1.9 5.5 4.2S11 11.4 8 11.4c-.6 0-1.2-.1-1.8-.2L3.4 12.9l.7-2.4C3.1 9.7 2.5 8.5 2.5 7.2Z"/></svg>
+    <span lang="de">Hilfe</span><span lang="en">Help</span>
+  </a>
+  <a href="/roadmap/">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13.8V2.6M4 3.4c2.6-1.2 5.4 1 8 0v5.4c-2.6 1.2-5.4-1-8 0Z"/></svg>
+    <span lang="de">Roadmap</span><span lang="en">Roadmap</span>
+  </a>
+  <a href="/datenschutz.html">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.2V5.5a3 3 0 0 1 6 0v1.7"/><rect x="3.6" y="7.2" width="8.8" height="6" rx="2"/></svg>
+    <span lang="de">Daten</span><span lang="en">Privacy</span>
+  </a>
+  <a href="/impressum.html" aria-current="page">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2.4h5l3 3v8.2H4Z"/><path d="M9 2.4v3h3M6.2 8.6h3.6M6.2 10.8h3.6"/></svg>
+    <span lang="de">Impressum</span><span lang="en">Legal</span>
+  </a>
+  </div>
+</nav>
 
-<h2>Umsatzsteuer</h2>
-<div class="todo">
-  <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE367507189<br>
-  Als Kleinunternehmer im Sinne von § 19 UStG wird keine Umsatzsteuer ausgewiesen.</p>
-</div>
-
-<h2>Verantwortlich für den Inhalt</h2>
-<div class="todo">
-  <p>Robert Schädlich, Schillerstrasse 50, 46535 Dinslaken, Deutschland</p>
-</div>
-
-<h2>Verbraucherstreitbeilegung</h2>
-<p>Ich bin nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-
-<h2>Haftung für Links</h2>
-<p>Diese Seite enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte ist stets der jeweilige Anbieter verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft; rechtswidrige Inhalte waren nicht erkennbar. Werden mir Rechtsverletzungen bekannt, entferne ich derartige Links umgehend.</p>
-
-<h2>Urheberrecht</h2>
-<p>Die auf dieser Seite veröffentlichten Inhalte unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Vervielfältigung, Bearbeitung und Verbreitung außerhalb der Grenzen des Urheberrechts bedürfen meiner schriftlichen Zustimmung.</p>
-
-<footer>
-  <a href="index.html">Support</a>
-  <a href="datenschutz.html">Datenschutz</a>
-</footer>
-
-</div>
+<script src="/assets/app.js"></script>
 </body>
 </html>
