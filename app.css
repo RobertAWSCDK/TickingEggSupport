@@ -1,0 +1,265 @@
+/* ============================================================
+   Ticking Egg — Website
+   Ein Stylesheet für alle Seiten. Farben und Maße folgen der App.
+   ============================================================ */
+
+/* ---------- Schrift: DM Mono, selbst gehostet ----------
+   Dateien nach /assets/fonts/ legen. Fehlen sie, greift die
+   System-Monospace als Ersatz und das Layout bleibt gleich.      */
+@font-face{
+  font-family:"DM Mono"; font-style:normal; font-weight:300; font-display:swap;
+  src:url("/assets/fonts/DMMono-Light.woff2") format("woff2");
+}
+@font-face{
+  font-family:"DM Mono"; font-style:normal; font-weight:400; font-display:swap;
+  src:url("/assets/fonts/DMMono-Regular.woff2") format("woff2");
+}
+@font-face{
+  font-family:"DM Mono"; font-style:normal; font-weight:500; font-display:swap;
+  src:url("/assets/fonts/DMMono-Medium.woff2") format("woff2");
+}
+
+/* ---------- Marken ---------- */
+:root{
+  --bg:#E9DBC4;          /* Sand, exakt aus dem Screenshot */
+  --fg:#161410;          /* Tinte */
+  --muted:#6A6357;       /* zweite Stufe */
+  --faint:#948C7D;       /* dritte Stufe */
+  --line:rgba(22,20,16,.15);
+  --hairline:rgba(22,20,16,.10);
+
+  --green:#1E9E4F;       /* läuft */
+  --orange:#D96B32;      /* anlegen */
+
+  --pill:999px;          /* Pillen und Kreise */
+  --card:24px;           /* Karten */
+  --input:12px;          /* kleine Felder */
+
+  --gap:20px;            /* Seitenrand */
+  --measure:620px;
+
+  --spring:cubic-bezier(.2,1.25,.4,1);
+}
+
+/* Dunkel ist die exakte Umkehrung, wie in der App */
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#161410;
+    --fg:#E9DBC4;
+    --muted:#9A9080;
+    --faint:#6E6759;
+    --line:rgba(233,219,196,.16);
+    --hairline:rgba(233,219,196,.11);
+    --green:#3BB268;
+    --orange:#E5783F;
+  }
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+
+body{
+  margin:0;
+  padding:0 var(--gap) calc(112px + env(safe-area-inset-bottom));
+  background:var(--bg);
+  color:var(--fg);
+  font-family:"DM Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:16.5px;
+  line-height:1.62;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--fg);color:var(--bg)}
+
+.wrap{width:100%;max-width:var(--measure);margin:0 auto}
+
+a{color:inherit}
+:focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:6px}
+
+/* Sprache: ohne JavaScript bleibt Deutsch stehen */
+html[data-lang="de"] [lang="en"]{display:none}
+html[data-lang="en"] [lang="de"]{display:none}
+
+/* ---------- Kopfzeile ---------- */
+.top{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:20px 0 4px;
+}
+.wordmark{
+  font-size:14px;font-weight:500;letter-spacing:-.01em;
+  text-decoration:none;color:var(--fg);
+}
+.wordmark--back{color:var(--muted)}
+.wordmark--back:hover{color:var(--fg)}
+
+.lang{display:flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:var(--pill)}
+.lang button{
+  font:inherit;font-size:11.5px;letter-spacing:.06em;
+  border:0;background:transparent;color:var(--muted);
+  padding:4px 12px;border-radius:var(--pill);cursor:pointer;
+  transition:color .15s ease;
+}
+.lang button:hover{color:var(--fg)}
+.lang button[aria-pressed="true"]{
+  background:var(--fg);color:var(--bg);font-weight:500;
+}
+
+/* ---------- Kopf der Seite ---------- */
+.hero{margin-top:0;padding:28px 0 36px;text-align:center}
+.hero--slim{padding:24px 0 28px;text-align:left}
+
+h1{
+  margin:0 0 14px;
+  font-size:clamp(30px,7.5vw,46px);
+  font-weight:500;line-height:1.06;letter-spacing:-.035em;
+}
+.hero--slim h1{font-size:clamp(26px,6vw,34px);margin-bottom:6px}
+
+.lede{margin:0 auto;max-width:40ch;color:var(--muted);font-size:16.5px}
+.hero--slim .lede{margin:0;max-width:46ch;font-size:15px}
+
+/* ---------- Ei-Zeichen ---------- */
+.mark{display:block;margin:0 auto 24px}
+.mark--wind{animation:settle 900ms var(--spring) both}
+.mark--small{width:44px;height:auto;margin:0 0 18px}
+@keyframes settle{
+  0%{transform:scale(.9) rotate(-6deg)}
+  100%{transform:scale(1) rotate(0)}
+}
+
+/* ---------- Abschnitte ---------- */
+section{margin-top:44px}
+.hero + section{margin-top:8px}
+
+.rule{
+  display:flex;align-items:baseline;gap:14px;
+  margin:0 0 4px;padding-bottom:12px;
+  font-size:13px;font-weight:500;letter-spacing:.02em;
+  color:var(--muted);
+  border-bottom:1px solid var(--line);
+}
+.rule::before{content:"";order:2;flex:1}
+.rule__count{order:3;font-variant-numeric:tabular-nums;color:var(--faint);font-size:12px}
+
+p{margin:0 0 14px}
+p:last-child{margin-bottom:0}
+.prose p{max-width:64ch}
+.muted{color:var(--muted)}
+
+ul.plain{list-style:none;margin:0;padding:0}
+ul.bullets{margin:0 0 14px;padding-left:20px;color:var(--muted)}
+ul.bullets li{margin-bottom:6px}
+
+/* ---------- Zeilen, wie die Timer-Liste ---------- */
+.rows{list-style:none;margin:0;padding:0}
+.row{padding:20px 2px;border-top:1px solid var(--hairline)}
+.rows > .row:first-child{border-top:0}
+.row h3{margin:0 0 4px;font-size:17px;font-weight:500;letter-spacing:-.01em}
+.row p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+
+/* Statuspunkt für die Roadmap */
+.row--dot{display:grid;grid-template-columns:9px 1fr;gap:14px;align-items:start}
+.dot{width:9px;height:9px;margin-top:9px;border-radius:50%;border:1.5px solid var(--faint)}
+.row--live .dot{border-color:var(--green);background:var(--green)}
+
+/* die gefüllte Pille — der ausgewählte Timer */
+.row--now{
+  border-top:0;margin:8px 0;padding:20px 18px;
+  border-radius:var(--card);
+  background:var(--fg);color:var(--bg);
+}
+.row--now + .row{border-top:0}
+.row--now p{color:var(--bg);opacity:.72}
+.row--now .dot{border-color:var(--bg);background:var(--bg)}
+
+/* ---------- Zeile mit Ziel rechts ---------- */
+.linkrow{
+  display:flex;align-items:center;gap:14px;
+  padding:18px 2px;border-top:1px solid var(--hairline);
+  text-decoration:none;color:var(--fg);
+}
+.rows > .linkrow:first-child{border-top:0}
+.linkrow__label{flex:1;font-size:17px;font-weight:500}
+.linkrow__value{color:var(--muted);font-size:15px}
+.linkrow svg{flex:none;color:var(--faint)}
+.linkrow:hover .linkrow__value,.linkrow:hover svg{color:var(--fg)}
+
+/* ---------- Knöpfe ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:52px;padding:14px 30px;
+  border-radius:var(--pill);
+  font:inherit;font-size:16px;font-weight:500;text-decoration:none;
+  background:var(--fg);color:var(--bg);
+  transition:transform .18s var(--spring);
+}
+.btn:active{transform:scale(.975)}
+.btn--accent{background:var(--orange);color:var(--bg)}
+.btn--wide{display:flex;width:100%}
+.hero .btn{margin-top:28px}
+
+/* ---------- Datenblock für Adressen ---------- */
+.block{
+  border:1px solid var(--line);border-radius:var(--input);
+  padding:16px 18px;margin:0 0 14px;
+}
+.block p{margin:0}
+
+/* ---------- Hinweis ---------- */
+.note{
+  margin-top:14px;padding-left:14px;
+  border-left:2px solid var(--line);
+  color:var(--faint);font-size:14px;line-height:1.5;
+}
+
+/* ---------- Modusleiste unten, wie in der App ---------- */
+.modebar{
+  position:fixed;left:0;right:0;bottom:0;z-index:20;
+  display:flex;justify-content:center;gap:6px;
+  padding:0 12px calc(12px + env(safe-area-inset-bottom));
+  pointer-events:none;
+}
+.modebar__inner{
+  display:flex;justify-content:center;gap:4px;
+  padding:5px;border-radius:var(--pill);
+  background:var(--bg);border:1px solid var(--line);
+  pointer-events:auto;
+}
+.modebar__inner a{
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  min-width:74px;padding:8px 10px 7px;
+  border-radius:var(--pill);
+  text-decoration:none;color:var(--muted);
+}
+.modebar__inner span{
+  font-size:9px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;
+  line-height:1;
+}
+.modebar__inner svg{display:block}
+.modebar__inner a:hover{color:var(--fg)}
+.modebar__inner a[aria-current="page"]{background:var(--fg);color:var(--bg)}
+
+/* ---------- Fuß ---------- */
+footer.page{
+  margin-top:48px;padding-top:20px;border-top:1px solid var(--hairline);
+  color:var(--faint);font-size:13px;
+}
+
+/* ---------- Klein ---------- */
+@media (max-width:430px){
+  body{font-size:16px}
+  .modebar__inner{width:100%}
+  .modebar__inner a{min-width:0;flex:1;padding:8px 4px 7px}
+  .modebar__inner span{font-size:8.5px;letter-spacing:.1em}
+  .row{padding:18px 2px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+@media print{
+  .modebar,.lang,.mark{display:none}
+  body{padding:0;background:#fff;color:#000;font-size:11pt}
+  .block{border-color:#999}
+}
