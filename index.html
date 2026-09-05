@@ -1,146 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de" data-lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ticking Egg — Support</title>
-<meta name="description" content="Help, frequently asked questions and contact for the Ticking Egg timer app for iPhone.">
-<style>
-  :root{
-    --bg:#EDE3D2; --bg-deep:#DCCFB8; --surface:#F8F3E9;
-    --ink:#221E1A; --muted:#7C7264; --line:#D6C9B2;
-    --gold:#A8842F; --butter:#EBDB9B; --butter-deep:#C9A94A;
-  }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    margin:0; padding:0 22px 84px;
-    background:
-      radial-gradient(120% 70% at 50% 8%, #FAF6EE 0%, var(--bg) 46%, var(--bg-deep) 100%)
-      fixed;
-    color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size:17px; line-height:1.62;
-  }
-  .wrap{max-width:640px; margin:0 auto}
-  .label{
-    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    font-size:12px; letter-spacing:.22em; text-transform:uppercase;
-    color:var(--gold); margin:0;
-  }
-  header{padding:64px 0 8px; text-align:center}
-  .mark{display:block; margin:0 auto 26px}
-  h1{font-size:40px; line-height:1.12; letter-spacing:-.02em; margin:16px 0 10px; font-weight:800}
-  .lede{color:var(--muted); margin:0 auto; max-width:34em}
-  .cta{
-    display:inline-block; margin:30px 0 4px; padding:15px 34px;
-    background:linear-gradient(180deg,#F6EAB8 0%,var(--butter) 55%,var(--butter-deep) 100%);
-    color:#3B2F12; text-decoration:none; font-weight:700; font-size:17px;
-    border-radius:999px; box-shadow:0 4px 0 #A98C36, 0 10px 22px rgba(120,96,40,.28);
-  }
-  .cta:active{transform:translateY(2px); box-shadow:0 2px 0 #A98C36, 0 6px 14px rgba(120,96,40,.28)}
-  a{color:var(--gold)}
-  a:focus-visible,.cta:focus-visible{outline:3px solid #7C6520; outline-offset:3px}
-  section{margin-top:56px}
-  h2{font-size:15px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
-     font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-     color:var(--ink); margin:0 0 20px; padding-bottom:12px; border-bottom:1px solid var(--line)}
-  .card{background:var(--surface); border-radius:22px; padding:26px 26px 6px;
-        box-shadow:0 1px 0 rgba(255,255,255,.7) inset, 0 8px 26px rgba(120,100,70,.10)}
-  .qa{padding:0 0 24px; border-bottom:1px solid var(--line)}
-  .qa:last-child{border-bottom:0}
-  .qa + .qa{padding-top:24px}
-  .qa h3{font-size:18px; margin:0 0 6px; font-weight:700}
-  .qa p{margin:0; color:#4A423A}
-  .contact p{margin:0 0 10px}
-  footer{margin-top:64px; padding-top:24px; border-top:1px solid var(--line);
-         text-align:center; color:var(--muted); font-size:14px}
-  footer a{margin:0 10px; white-space:nowrap}
-  @media (max-width:420px){ h1{font-size:32px} body{font-size:16px} .card{padding:22px 20px 4px} }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hilfe · Ticking Egg</title>
+<meta name="description" content="Antworten auf die häufigsten Fragen zur Timer-App Ticking Egg für das iPhone – und der direkte Draht zu mir.">
+<meta name="theme-color" content="#E9DBC4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161410" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Hilfe · Ticking Egg">
+<meta property="og:description" content="Antworten auf die häufigsten Fragen zur Timer-App Ticking Egg für das iPhone.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/assets/app.css">
 </head>
-<body>
+
+<body data-title-de="Hilfe · Ticking Egg"
+      data-title-en="Help · Ticking Egg"
+      data-desc-de="Antworten auf die häufigsten Fragen zur Timer-App Ticking Egg für das iPhone – und der direkte Draht zu mir."
+      data-desc-en="Answers to the most common questions about Ticking Egg, the timer app for iPhone – and a direct line to me.">
+
 <div class="wrap">
 
-  <header>
-    <svg class="mark" width="66" height="84" viewBox="0 0 66 84" aria-hidden="true">
-      <path d="M33 3C18 3 6 26 6 47a27 27 0 0 0 54 0C60 26 48 3 33 3Z" fill="#CFC6B8"/>
-      <path d="M33 3C18 3 6 26 6 47a27 27 0 0 0 27 27V3Z" fill="#DED6C9"/>
-      <path d="M7 47h52" stroke="#A79C8B" stroke-width="2"/>
-      <g stroke="#221E1A" stroke-width="2">
-        <path d="M13 41v6M20 39v8M27 38v9M34 38v9M41 39v8M48 41v6M55 43v4"/>
-      </g>
-      <path d="M33 52l7 8H26l7-8Z" fill="#221E1A"/>
-    </svg>
-    <p class="label">Support</p>
-    <h1>Ticking Egg</h1>
-    <p class="lede">Help, answers and a way to reach a human. If something isn't working, write — every message is read.</p>
-    <a class="cta" href="mailto:hello@robdsgn.com?subject=Ticking%20Egg%20Support">Email support</a>
+  <header class="top">
+    <span class="wordmark">Ticking Egg</span>
+    <div class="lang" role="group" aria-label="Sprache / Language">
+      <button type="button" data-lang-btn="de" aria-pressed="true">DE</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
   </header>
 
-  <section>
-    <h2>About the app</h2>
-    <p>Ticking Egg is a timer for iPhone. Instead of a number on a white screen, a small 3D object sits at the centre and you wind it up with your thumb. It runs several timers at once, calculates egg cooking times from size, firmness and starting temperature, and includes an interval timer for training and a stopwatch.</p>
-  </section>
+  <main>
 
-  <section>
-    <h2>Frequently asked questions</h2>
-    <div class="card">
+    <section class="hero">
+      <svg class="mark mark--wind" width="104" height="112" viewBox="0 0 104 112" aria-hidden="true">
+        <defs><clipPath id="eggClip"><path d="M52 3C27 3 6 39 6 68c0 26 20 44 46 44s46-18 46-44C98 39 77 3 52 3Z"/></clipPath></defs>
+        <g clip-path="url(#eggClip)">
+          <rect width="104" height="112" fill="#D3D1CC"/>
+          <ellipse cx="36" cy="40" rx="50" ry="56" transform="rotate(-22 36 40)" fill="#FFFEF9"/>
+        </g>
+        <path d="M12 56Q52 76 92 56" fill="none" stroke="#B9B5AC" stroke-width="1.4"/>
+        <g stroke="#161410" stroke-width="1.6" stroke-linecap="round" opacity=".8">
+          <path d="M14.7 57.3l3.2 -6.8M20 59.6l1.9 -4.6M25.3 61.6l2.4 -7.1M30.7 63.2l1.3 -4.8M36 64.4l1.5 -7.4M41.3 65.3l.7 -5M46.7 65.8l.5 -7.5M52 66l0 -5M57.3 65.8l-.5 -7.5M62.7 65.3l-.7 -5M68 64.4l-1.5 -7.4M73.3 63.2l-1.3 -4.8M78.7 61.6l-2.4 -7.1M84 59.6l-1.9 -4.6M89.3 57.3l-3.2 -6.8"/>
+        </g>
+        <path d="M52 71l6 8.5H46Z" fill="#E16A54"/>
+      </svg>
 
-      <div class="qa">
-        <h3>My timer didn't go off.</h3>
-        <p>Make sure notifications are allowed for the app in iOS Settings, and check that a Focus mode isn't muting them. The running countdown also appears on your Lock Screen, so you can see it without opening the app.</p>
-      </div>
+      <h1>
+        <span lang="de">Hilfe</span>
+        <span lang="en">Help</span>
+      </h1>
+      <p class="lede">
+        <span lang="de">Antworten auf die Fragen, die am häufigsten kommen. Wenn etwas nicht funktioniert: schreib mir. Jede Nachricht wird gelesen.</span>
+        <span lang="en">Answers to the questions that come up most. If something isn&#39;t working, write to me. Every message gets read.</span>
+      </p>
+      <a class="btn" href="mailto:hello@robdsgn.com?subject=Ticking%20Egg">
+        <span lang="de">E-Mail schreiben</span>
+        <span lang="en">Write an email</span>
+      </a>
+    </section>
 
-      <div class="qa">
-        <h3>Does the timer keep running when I close the app?</h3>
-        <p>Yes. The countdown continues in the background and shows up on your Lock Screen and in the Dynamic Island.</p>
-      </div>
+    <section class="prose">
+      <h2 class="rule">
+        <span lang="de">Die App</span><span lang="en">The app</span>
+      </h2>
+      <p>
+        <span lang="de">Ticking Egg ist ein Timer fürs iPhone. Statt einer Zahl auf weißem Grund steht ein kleines 3D-Objekt in der Mitte, das du mit dem Daumen aufziehst wie eine echte Eieruhr. Mehrere Timer laufen gleichzeitig, die Eierzeit rechnet sich aus Größe, Härte und Starttemperatur, dazu kommen ein Wecker, ein Intervall-Timer fürs Training und eine Stoppuhr.</span>
+        <span lang="en">Ticking Egg is a timer for iPhone. Instead of a number on a white screen, a small 3D object sits in the middle and you wind it up with your thumb, like a real kitchen timer. Several timers run at once, egg times are calculated from size, firmness and starting temperature, and there&#39;s an alarm clock, an interval timer for training and a stopwatch.</span>
+      </p>
+    </section>
 
-      <div class="qa">
-        <h3>I bought an object and it's not showing up.</h3>
-        <p>Open Settings inside the app and tap Restore Purchases. Make sure you're signed in with the same Apple Account you bought it with.</p>
-      </div>
+    <section>
+      <h2 class="rule">
+        <span lang="de">Häufige Fragen</span><span lang="en">Common questions</span>
+        <span class="rule__count">08</span>
+      </h2>
+      <ul class="rows">
 
-      <div class="qa">
-        <h3>Can I get a refund?</h3>
-        <p>All purchases are handled by Apple, not by us. Refunds go through <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
-      </div>
+        <li class="row">
+          <h3>
+            <span lang="de">Mein Timer hat nicht geklingelt.</span>
+            <span lang="en">My timer didn&#39;t go off.</span>
+          </h3>
+          <p>
+            <span lang="de">Prüf in den iOS-Einstellungen, ob Mitteilungen für die App erlaubt sind und ob ein Fokus sie stummschaltet. Steht das iPhone auf lautlos, klingelt bei gesperrtem Bildschirm nichts. Der laufende Countdown liegt außerdem auf dem Sperrbildschirm – du siehst ihn, ohne die App zu öffnen.</span>
+            <span lang="en">Check in iOS Settings that notifications are allowed for the app and that a Focus mode isn&#39;t muting them. With the ring switch set to silent, nothing sounds while the screen is locked. The running countdown also sits on your Lock Screen, so you can see it without opening the app.</span>
+          </p>
+        </li>
 
-      <div class="qa">
-        <h3>My eggs come out different than the app says.</h3>
-        <p>Cooking time depends on your pot, your stove and your altitude. Use the firmness slider to shift the time and the app will remember it.</p>
-      </div>
+        <li class="row">
+          <h3>
+            <span lang="de">Läuft der Timer weiter, wenn ich die App schließe?</span>
+            <span lang="en">Does the timer keep running when I close the app?</span>
+          </h3>
+          <p>
+            <span lang="de">Ja. Der Countdown läuft im Hintergrund weiter und erscheint auf dem Sperrbildschirm und in der Dynamic Island.</span>
+            <span lang="en">Yes. The countdown continues in the background and shows up on your Lock Screen and in the Dynamic Island.</span>
+          </p>
+        </li>
 
-      <div class="qa">
-        <h3>How do I delete a timer?</h3>
-        <p>Swipe left on it in the list. Swipe right to open its settings.</p>
-      </div>
+        <li class="row">
+          <h3>
+            <span lang="de">Ich habe ein Objekt gekauft, es taucht aber nicht auf.</span>
+            <span lang="en">I bought an object and it&#39;s not showing up.</span>
+          </h3>
+          <p>
+            <span lang="de">Öffne die Einstellungen in der App und tippe auf „Käufe wiederherstellen“. Wichtig ist, dass du mit demselben Apple-Account angemeldet bist, mit dem du gekauft hast.</span>
+            <span lang="en">Open Settings inside the app and tap Restore Purchases. Make sure you&#39;re signed in with the same Apple Account you bought it with.</span>
+          </p>
+        </li>
 
-      <div class="qa">
-        <h3>Where is my data stored?</h3>
-        <p>Everything stays on your device. There is no account, no sign-up and no tracking.</p>
-      </div>
+        <li class="row">
+          <h3>
+            <span lang="de">Bekomme ich mein Geld zurück?</span>
+            <span lang="en">Can I get a refund?</span>
+          </h3>
+          <p>
+            <span lang="de">Alle Käufe wickelt Apple ab, nicht ich. Erstattungen laufen über <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</span>
+            <span lang="en">All purchases are handled by Apple, not by me. Refunds go through <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</span>
+          </p>
+        </li>
 
-      <div class="qa">
-        <h3>I have an idea for a new object.</h3>
-        <p>Write to us. Suggestions are genuinely read.</p>
-      </div>
+        <li class="row">
+          <h3>
+            <span lang="de">Meine Eier werden anders als angegeben.</span>
+            <span lang="en">My eggs come out different than the app says.</span>
+          </h3>
+          <p>
+            <span lang="de">Die Garzeit hängt von Topf, Herd und Höhenlage ab. Verschieb die Zeit mit dem Härte-Regler, dann merkt sich die App deine Einstellung.</span>
+            <span lang="en">Cooking time depends on your pot, your stove and your altitude. Shift the time with the firmness slider and the app will remember it.</span>
+          </p>
+        </li>
 
-    </div>
-  </section>
+        <li class="row">
+          <h3>
+            <span lang="de">Wie lösche ich einen Timer?</span>
+            <span lang="en">How do I delete a timer?</span>
+          </h3>
+          <p>
+            <span lang="de">In der Liste nach links wischen. Nach rechts wischen öffnet seine Einstellungen.</span>
+            <span lang="en">Swipe left on it in the list. Swipe right to open its settings.</span>
+          </p>
+        </li>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p><a href="mailto:hello@robdsgn.com?subject=Ticking%20Egg%20Support">hello@robdsgn.com</a></p>
-    <p style="color:var(--muted)">We usually reply within a few days. Telling us your iPhone model and iOS version helps.</p>
-  </section>
+        <li class="row">
+          <h3>
+            <span lang="de">Wo liegen meine Daten?</span>
+            <span lang="en">Where is my data stored?</span>
+          </h3>
+          <p>
+            <span lang="de">Alles bleibt auf deinem Gerät. Kein Konto, keine Anmeldung, kein Tracking.</span>
+            <span lang="en">Everything stays on your device. No account, no sign-up, no tracking.</span>
+          </p>
+        </li>
 
-  <footer>
-    <a href="datenschutz.html">Privacy Policy / Datenschutz</a>
-    <a href="impressum.html">Impressum</a>
-  </footer>
+        <li class="row">
+          <h3>
+            <span lang="de">Ich hätte eine Idee für ein Objekt.</span>
+            <span lang="en">I have an idea for an object.</span>
+          </h3>
+          <p>
+            <span lang="de">Schreib sie mir. Die besten Vorschläge landen auf der Liste mit dem, was noch kommt.</span>
+            <span lang="en">Send it to me. The best suggestions end up on the list of what&#39;s coming next.</span>
+          </p>
+        </li>
 
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="rule">
+        <span lang="de">Kontakt</span><span lang="en">Contact</span>
+      </h2>
+      <ul class="rows plain">
+        <li>
+          <a class="linkrow" href="mailto:hello@robdsgn.com?subject=Ticking%20Egg">
+            <span class="linkrow__label">
+              <span lang="de">E-Mail</span><span lang="en">Email</span>
+            </span>
+            <span class="linkrow__value">hello@robdsgn.com</span>
+            <svg width="9" height="15" viewBox="0 0 9 15" fill="none" aria-hidden="true"><path d="M1.5 1.5 7 7.5l-5.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="linkrow" href="/roadmap/">
+            <span class="linkrow__label">
+              <span lang="de">Was noch kommt</span><span lang="en">What&#39;s cooking</span>
+            </span>
+            <span class="linkrow__value">
+              <span lang="de">Die Liste</span><span lang="en">The list</span>
+            </span>
+            <svg width="9" height="15" viewBox="0 0 9 15" fill="none" aria-hidden="true"><path d="M1.5 1.5 7 7.5l-5.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </li>
+      </ul>
+      <p class="note">
+        <span lang="de">Antwort meist innerhalb weniger Tage. iPhone-Modell und iOS-Version helfen mir beim Suchen.</span>
+        <span lang="en">I usually reply within a few days. Telling me your iPhone model and iOS version helps me find the problem.</span>
+      </p>
+    </section>
+
+  </main>
 </div>
+
+<nav class="modebar" aria-label="Ticking Egg">
+  <div class="modebar__inner">
+  <a href="/" aria-current="page">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 7.2c0-2.3 2.5-4.2 5.5-4.2s5.5 1.9 5.5 4.2S11 11.4 8 11.4c-.6 0-1.2-.1-1.8-.2L3.4 12.9l.7-2.4C3.1 9.7 2.5 8.5 2.5 7.2Z"/></svg>
+    <span lang="de">Hilfe</span><span lang="en">Help</span>
+  </a>
+  <a href="/roadmap/">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13.8V2.6M4 3.4c2.6-1.2 5.4 1 8 0v5.4c-2.6 1.2-5.4-1-8 0Z"/></svg>
+    <span lang="de">Roadmap</span><span lang="en">Roadmap</span>
+  </a>
+  <a href="/datenschutz.html">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.2V5.5a3 3 0 0 1 6 0v1.7"/><rect x="3.6" y="7.2" width="8.8" height="6" rx="2"/></svg>
+    <span lang="de">Daten</span><span lang="en">Privacy</span>
+  </a>
+  <a href="/impressum.html">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2.4h5l3 3v8.2H4Z"/><path d="M9 2.4v3h3M6.2 8.6h3.6M6.2 10.8h3.6"/></svg>
+    <span lang="de">Impressum</span><span lang="en">Legal</span>
+  </a>
+  </div>
+</nav>
+
+<script src="/assets/app.js"></script>
 </body>
 </html>
